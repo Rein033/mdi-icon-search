@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDI Icon Search – find Material Design Icons for Home Assistant (mdi:)</title>
+<meta name="description" content="Search all 7,400+ Material Design Icons used by Home Assistant, by name, alias, tag or even in Dutch. Click to copy mdi:name, YAML or the SVG.">
+<link rel="canonical" href="https://uselesssite.nl/mdi-icon-search/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="uselesssite.nl">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://uselesssite.nl/mdi-icon-search/">
+<meta property="og:title" content="MDI Icon Search – find Material Design Icons for Home Assistant (mdi:)">
+<meta property="og:description" content="Search all 7,400+ Material Design Icons used by Home Assistant, by name, alias, tag or even in Dutch. Click to copy mdi:name, YAML or the SVG.">
+<meta property="og:image" content="https://uselesssite.nl/mdi-icon-search/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MDI Icon Search – find Material Design Icons for Home Assistant (mdi:)">
+<meta name="twitter:description" content="Search all 7,400+ Material Design Icons used by Home Assistant, by name, alias, tag or even in Dutch. Click to copy mdi:name, YAML or the SVG.">
+<meta name="twitter:image" content="https://uselesssite.nl/mdi-icon-search/og.png">
+<meta name="theme-color" content="#039be5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "MDI Icon Search", "url": "https://uselesssite.nl/mdi-icon-search/", "description": "Search all 7,400+ Material Design Icons used by Home Assistant, by name, alias, tag or even in Dutch. Click to copy mdi:name, YAML or the SVG.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript", "inLanguage": "en", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "featureList": ["Search 7,400+ icons by name, alias and category, instantly", "Dutch search words work too (lamp, deur, wasmachine, …)", "Preview in your own colour and size, light or dark", "Copy mdi:name, a YAML icon: line, the SVG or the path data", "Browse by category, recently copied icons are remembered", "Deep links: #lightbulb opens that icon directly"], "image": "https://uselesssite.nl/mdi-icon-search/og.png", "author": {"@type": "Person", "name": "Rein033", "url": "https://github.com/Rein033"}, "license": "https://opensource.org/licenses/MIT", "codeRepository": "https://github.com/Rein033/mdi-icon-search"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "uselesssite.nl", "item": "https://uselesssite.nl/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://uselesssite.nl/tools/"}, {"@type": "ListItem", "position": 3, "name": "MDI Icon Search", "item": "https://uselesssite.nl/mdi-icon-search/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which icons can I use in Home Assistant?", "acceptedAnswer": {"@type": "Answer", "text": "Home Assistant includes the full Material Design Icons set. Any icon from this search works as icon: mdi:name in cards, entities and dashboards, without installing anything."}}, {"@type": "Question", "name": "How do I change an entity icon?", "acceptedAnswer": {"@type": "Answer", "text": "Open the entity in Settings → Devices & services → Entities, click the settings cog and paste mdi:name in the Icon field. In YAML cards use icon: mdi:name."}}, {"@type": "Question", "name": "Can I search in Dutch?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Common Dutch words like lamp, deur, wasmachine, verwarming and zonnepanelen are translated to the right English icon names."}}, {"@type": "Question", "name": "Can I download an icon as SVG?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pick an icon and use Copy SVG or Download SVG; your chosen colour is applied to the SVG."}}]}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%2303a9f4'/%3E%3Crect x='9' y='10' width='14' height='3' rx='1.5' fill='%23fff'/%3E%3Crect x='9' y='15' width='10' height='3' rx='1.5' fill='%23fff' opacity='.7'/%3E%3Crect x='9' y='20' width='12' height='3' rx='1.5' fill='%23fff' opacity='.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="base.css?v=2">
+<link rel="stylesheet" href="style.css?v=2">
+
+<script defer src="https://analytics.uselesssite.nl/script.js" data-website-id="c8741679-5df2-4679-9527-39cc9edc25c0"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./"><span class="logo"><i class="mdi mdi-magnify-scan"></i></span>
+    <div><h1>MDI Icon Search</h1><small>Find an icon, copy mdi:name</small></div></a>
+  <nav>
+    <button type="button" class="ib" id="theme" title="Light / dark"><i class="mdi mdi-theme-light-dark"></i></button>
+    <a href="https://uselesssite.nl/tools/" class="ghost"><i class="mdi mdi-view-grid-outline"></i> <span>All tools</span></a>
+    <a href="https://github.com/Rein033/mdi-icon-search" class="ghost"><i class="mdi mdi-github"></i> <span>GitHub</span></a>
+    <a href="https://buymeacoffee.com/rein033" class="coffee" target="_blank" rel="noopener"><i class="mdi mdi-coffee"></i> <span>Coffee</span></a>
+  </nav>
+</header>
+
+<main>
+<div class="panel">
+  <div class="sbar">
+    <div class="zoek"><i class="mdi mdi-magnify"></i><input id="q" type="search" placeholder="Search icons, e.g. lightbulb, door, washing machine, lamp…" autocomplete="off" autofocus></div>
+    <select id="cat"><option value="">All categories</option></select>
+    <div class="colors" id="kleuren"></div>
+  </div>
+  <div class="hint" id="stat">Loading icons…</div>
+  <div class="recent" id="recent" hidden></div>
+</div>
+<div class="lay">
+  <div class="panel"><div class="igrid" id="grid"></div><button type="button" class="add" id="meer" hidden style="margin-top:12px"><i class="mdi mdi-chevron-down"></i> Show more</button></div>
+  <div class="panel sticky" id="detail">
+    <div class="big" id="big"><i class="mdi mdi-gesture-tap"></i></div>
+    <h2 id="dnaam">Pick an icon</h2>
+    <div class="hint" id="dmeta">Click any icon to see it here and copy it.</div>
+    <div class="cbtns" id="dbtns" hidden>
+      <button type="button" class="main" data-c="mdi"><i class="mdi mdi-content-copy"></i> <span id="dmdi">mdi:</span></button>
+      <button type="button" class="small" data-c="yaml"><i class="mdi mdi-code-braces"></i> icon: YAML</button>
+      <button type="button" class="small" data-c="svg"><i class="mdi mdi-svg"></i> Copy SVG</button>
+      <button type="button" class="small" data-c="dl"><i class="mdi mdi-download"></i> Download SVG</button>
+      <button type="button" class="small" data-c="path"><i class="mdi mdi-vector-curve"></i> Path data</button>
+      <button type="button" class="small" data-c="link"><i class="mdi mdi-link-variant"></i> Link</button>
+    </div>
+    <div class="tags" id="dtags"></div>
+    <div class="mini-prev" id="mini" hidden>
+      <div class="tile-demo"><span class="tic"><i class="mdi" id="mi1"></i></span><div><b>Living room</b><small>On · 80%</small></div></div>
+      <div class="tile-demo off"><span class="tic"><i class="mdi" id="mi2"></i></span><div><b>Living room</b><small>Off</small></div></div>
+    </div>
+  </div>
+</div>
+
+<section class="over">
+  <div class="panel">
+    <h2>What can MDI Icon Search do?</h2>
+    <p>Search all 7,400+ Material Design Icons used by Home Assistant, by name, alias, tag or even in Dutch. Click to copy mdi:name, YAML or the SVG.</p>
+    <ul class="kenm"><li>Search 7,400+ icons by name, alias and category, instantly</li><li>Dutch search words work too (lamp, deur, wasmachine, …)</li><li>Preview in your own colour and size, light or dark</li><li>Copy <code>mdi:name</code>, a YAML <code>icon:</code> line, the SVG or the path data</li><li>Browse by category, recently copied icons are remembered</li><li>Deep links: <code>#lightbulb</code> opens that icon directly</li></ul>
+  </div>
+  <div class="panel"><h2>Frequently asked questions</h2><div class="faq"><details><summary>Which icons can I use in Home Assistant?</summary><p>Home Assistant includes the full Material Design Icons set. Any icon from this search works as icon: mdi:name in cards, entities and dashboards, without installing anything.</p></details><details><summary>How do I change an entity icon?</summary><p>Open the entity in Settings → Devices & services → Entities, click the settings cog and paste mdi:name in the Icon field. In YAML cards use icon: mdi:name.</p></details><details><summary>Can I search in Dutch?</summary><p>Yes. Common Dutch words like lamp, deur, wasmachine, verwarming and zonnepanelen are translated to the right English icon names.</p></details><details><summary>Can I download an icon as SVG?</summary><p>Yes. Pick an icon and use Copy SVG or Download SVG; your chosen colour is applied to the SVG.</p></details></div></div>
+  <div class="panel"><h2>More free tools</h2><div class="rels"><a class="rel" href="https://uselesssite.nl/esphome-config-builder/"><span class="tile-ic"><i class="mdi mdi-chip"></i></span><span><b>ESPHome Config Builder</b><small>Pick a board and sensors, get the YAML</small></span></a><a class="rel" href="https://uselesssite.nl/ha-automation-builder/"><span class="tile-ic"><i class="mdi mdi-robot-outline"></i></span><span><b>HA Automation Builder</b><small>Build Home Assistant automations, copy the YAML</small></span></a><a class="rel" href="https://uselesssite.nl/ha-card-generator/"><span class="tile-ic"><i class="mdi mdi-view-dashboard-edit-outline"></i></span><span><b>HA Card Generator</b><small>Build Home Assistant cards, copy the YAML</small></span></a><a class="rel" href="https://uselesssite.nl/ha-theme-generator/"><span class="tile-ic"><i class="mdi mdi-palette-swatch-variant"></i></span><span><b>HA Theme Generator</b><small>Design a Home Assistant theme, copy the YAML</small></span></a><a class="rel" href="https://uselesssite.nl/universal-3d-cards/"><span class="tile-ic"><i class="mdi mdi-printer-3d-nozzle"></i></span><span><b>Universal 3D Cards</b><small>One 3D printer card for Home Assistant</small></span></a><a class="rel" href="https://uselesssite.nl/cv-generator/"><span class="tile-ic"><i class="mdi mdi-file-account-outline"></i></span><span><b>CV Generator</b><small>Modern cv maken en als PDF opslaan</small></span></a></div>
+    <p class="hint"><a href="https://uselesssite.nl/tools/">See all tools →</a></p></div>
+</section>
+
+</main>
+
+<footer>
+  Free and open source · Made by <a href="https://github.com/Rein033">Rein033</a> · Everything runs in your browser; the icon list is loaded from the jsDelivr CDN ·
+  <a href="https://uselesssite.nl/tools/">More tools</a> · Not affiliated with Home Assistant, ESPHome or the Open Home Foundation
+</footer>
+<script src="base.js?v=2"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
